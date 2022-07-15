@@ -4,9 +4,15 @@
 
 ## Getting Started
 
-Install the gem file by executing:
+To get a local copy up and running follow these simple example steps.
 
-    $ bundle install
+- copy this link `https://github.com/camilevahviraki/Enumerate`.
+- get the directory that you want to clone the repository.
+- open the command prompt in this directory.
+- write `https://github.com/camilevahviraki/Enumerate`.
+- go to the repository folder in your command prompt `Enumerate`.
+- Open terminal in that folder run `bundle install`.
+- run `ruby my_list.rb`
 
 
 ## Authors
