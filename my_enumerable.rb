@@ -1,28 +1,25 @@
 module MyEnumerable
-	def all?
+  def all?
     @list.each do |el|
       return true unless block_given?
+
       true_false = yield el
       return false unless true_false
     end
-    return true
+    true
   end
-  
+
   def any?
     @list.each do |l|
-      if yield l
-        return true
-      end
+      return true if yield l
     end
     false
   end
-  
+
   def filter
     arr = []
     @list.each do |l|
-      if yield l
-        arr.push(l)
-      end
+      arr.push(l) if yield l
     end
     arr
   end
