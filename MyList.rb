@@ -19,7 +19,17 @@ class MyList
       end
     end
     false
-  end        
+  end
+  
+  def filter
+    arr = []
+    @list.each do |l|
+      if yield l
+        arr.push(l)
+      end
+    end
+    arr
+  end
 end
 
 list = MyList.new(1,2,3,4)
@@ -29,4 +39,4 @@ p list.all? {|e| e < 5}
 p list.all? {|e| e > 5}
 p list.any? {|e| e == 2}
 p list.any? {|e| e == 5}
-# p list.filter {|e| e.even?}
+p list.filter {|e| e.even?}
